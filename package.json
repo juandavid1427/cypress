@@ -1,0 +1,39 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/cypress run",
+    "headTest": "npm run test -- --headed",
+    "chromeTest": "npm run test -- --browser chrome",
+    "recordDashboardTest": "npm run test -- --record --key 72a84286-2f11-40f9-9882-1e187d47ffd4 --reporter mochawesome",
+    "runWithTags": "npx cypress run --env tags=@Regression --headed --browser chrome"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumberReports/results.json"
+    },
+    "nonGlobalStepDefinitions": true
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/webpack-preprocessor": "^5.17.1",
+    "cypress": "^12.12.0",
+    "cypress-iframe": "^1.0.1",
+    "multiple-cucumber-html-reporter": "^3.4.0",
+    "neat-csv": "^7.0.0",
+    "ts-loader": "^9.4.3",
+    "typescript": "^5.0.4",
+    "webpack": "^5.83.1"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^17.1.1",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "ajv": "^8.12.0",
+    "convert-excel-to-json": "^1.7.0",
+    "xml2js": "^0.6.0"
+  }
+}

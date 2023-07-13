@@ -1,0 +1,13 @@
+.vscode
+dist
+node_modules
+package-lock.json
+npm-debug.log
+yarn-error.log
+.env
+cypress/screenshots/
+cypress/videos/
+cypress/cucumber-json/
+cypress/report
+cypress/.run
+.DS_Store
